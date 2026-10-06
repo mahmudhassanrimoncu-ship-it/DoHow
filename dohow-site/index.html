@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DoHow! — a free, structured library of practical knowledge. Learn how to do things, one concept at a time." />
+  <title>DoHow! — Learn how to do things.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="DoHow home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>DoHow<span class="brand-bang">!</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="#guides">Guides</a>
+      <a href="#map">Knowledge Map</a>
+      <a href="#track">Video Path</a>
+      <a href="#how">How it works</a>
+      <a href="#contribute">Contribute</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+      <button class="pill-btn small" data-open-search>Search <kbd>⌘ K</kbd></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="eyebrow"><span class="live-dot"></span> A public library for practical knowledge</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Learn <em>how</em> to do things.</h1>
+          <p class="hero-lede">Not another pile of articles. DoHow! turns practical knowledge into clear, atomic guides — connected by what you need to know first.</p>
+          <div class="hero-search">
+            <span class="search-glyph">⌕</span>
+            <input id="heroSearch" type="search" placeholder="What do you want to do?" autocomplete="off" />
+            <button id="heroSearchBtn">Explore <span>↗</span></button>
+          </div>
+          <div class="suggestions" aria-label="Popular searches">
+            <span>Try:</span>
+            <button class="text-chip" data-query="build a gaming pc">build a gaming PC</button>
+            <button class="text-chip" data-query="learn calculus">learn calculus</button>
+            <button class="text-chip" data-query="host a website">host a website</button>
+            <button class="text-chip" data-query="canvas commons">make an animated lesson</button>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Interactive preview of a DoHow knowledge map">
+          <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+          <div class="graph-card glass">
+            <div class="graph-topline"><span>knowledge / calculus</span><span>7 concepts · 2 hops</span></div>
+            <svg class="graph-lines" viewBox="0 0 530 370" role="img" aria-label="Prerequisite graph">
+              <defs>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#7bb4ff" stop-opacity=".18" />
+                  <stop offset="50%" stop-color="#3d83ff" stop-opacity=".8" />
+                  <stop offset="100%" stop-color="#94c6ff" stop-opacity=".22" />
+                </linearGradient>
+              </defs>
+              <path d="M86 82 C170 82, 176 52, 255 52" />
+              <path d="M86 82 C170 82, 174 120, 255 120" />
+              <path d="M255 52 C326 52, 338 88, 418 88" />
+              <path d="M255 120 C326 120, 340 88, 418 88" />
+              <path d="M255 120 C324 160, 335 184, 418 185" />
+              <path d="M418 88 C460 88, 471 120, 489 150" />
+              <path d="M418 185 C454 185, 466 164, 489 150" />
+            </svg>
+            <div class="node node-left n1"><span class="node-dot"></span><strong>Arithmetic</strong><small>foundation</small></div>
+            <div class="node node-left n2"><span class="node-dot"></span><strong>Algebra</strong><small>foundation</small></div>
+            <div class="node node-mid m1"><span class="node-dot"></span><strong>Functions</strong><small>prerequisite</small></div>
+            <div class="node node-mid m2 active"><span class="node-dot"></span><strong>Limits</strong><small>prerequisite</small></div>
+            <div class="node node-right r1"><span class="node-dot"></span><strong>Derivatives</strong><small>next</small></div>
+            <div class="node node-right r2"><span class="node-dot"></span><strong>Integrals</strong><small>next</small></div>
+            <div class="node node-center"><span class="node-dot"></span><strong>CALCULUS</strong><small>you are here</small></div>
+            <div class="graph-badge">1 concept at a time</div>
+          </div>
+          <div class="float-note note-left"><span>01</span><b>Prerequisites</b><small>know these first</small></div>
+          <div class="float-note note-right"><span>02</span><b>Next steps</b><small>see where it leads</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker section-wrap" aria-label="DoHow principles">
+      <div>01 / ONE THING</div><span>•</span><div>02 / CLEAR STEPS</div><span>•</span><div>03 / CONNECTED KNOWLEDGE</div><span>•</span><div>04 / FREE TO EXPLORE</div>
+    </section>
+
+    <section class="section-wrap intro-section" id="how">
+      <div class="section-kicker">THE PROBLEM</div>
+      <div class="split-heading">
+        <h2>Knowledge is everywhere.<br><em>Knowing what to do next isn't.</em></h2>
+        <p>Search engines give you pages. Videos give you pieces. Courses give you a fixed route. DoHow! is built around the missing layer: <strong>structure.</strong></p>
+      </div>
+      <div class="three-problems">
+        <article class="problem-card">
+          <span class="big-number">01</span>
+          <h3>Too much, too soon</h3>
+          <p>You open a guide and immediately hit terms you were never taught.</p>
+        </article>
+        <article class="problem-card featured">
+          <span class="big-number">02</span>
+          <h3>The missing middle</h3>
+          <p>The internet tells you what something is. It rarely shows the exact chain that gets you ready to use it.</p>
+          <div class="mini-route"><span>Goal</span><i></i><span>DoHow path</span><i></i><span>Done</span></div>
+        </article>
+        <article class="problem-card">
+          <span class="big-number">03</span>
+          <h3>Dead-end learning</h3>
+          <p>You finish one page and still don't know what skill should come next.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-wrap guides-section" id="guides">
+      <div class="section-kicker">EXPLORE THE LIBRARY</div>
+      <div class="section-heading-row">
+        <div>
+          <h2>Start with something<br><em>you want to make happen.</em></h2>
+        </div>
+        <div class="filter-wrap">
+          <label for="domainFilter">Domain</label>
+          <select id="domainFilter">
+            <option value="all">All domains</option>
+            <option value="technology">Technology</option>
+            <option value="math">Mathematics</option>
+            <option value="home">Home & repair</option>
+            <option value="life">Life skills</option>
+            <option value="science">Science</option>
+            <option value="media">Media & video</option>
+          </select>
+        </div>
+      </div>
+      <div class="guide-grid" id="guideGrid"></div>
+      <div class="center-action"><button class="outline-btn" id="showAllBtn">Browse all guides <span>→</span></button></div>
+    </section>
+
+    <section class="section-wrap map-section" id="map">
+      <div class="section-kicker">THE KNOWLEDGE MAP</div>
+      <div class="map-intro">
+        <div>
+          <h2>Every guide has a <em>before</em><br>and an <em>after.</em></h2>
+          <p>DoHow! models knowledge as a graph. Find the skill you want, then walk backward to the gaps — or forward into what you can build next.</p>
+        </div>
+        <div class="map-actions"><button class="pill-btn" data-open-search>Find a concept</button><a href="#contribute" class="ghost-link">Help build the map →</a></div>
+      </div>
+      <div class="map-stage glass">
+        <div class="map-toolbar"><span>Learning path / Build a website</span><span class="map-live"><i></i> live graph</span></div>
+        <div class="map-canvas">
+          <svg viewBox="0 0 1000 460" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="mapStroke" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7e9eff" stop-opacity=".15" />
+                <stop offset=".55" stop-color="#4c8dff" stop-opacity=".85" />
+                <stop offset="1" stop-color="#b7d4ff" stop-opacity=".2" />
+              </linearGradient>
+            </defs>
+            <path d="M102 160 C190 160, 210 90, 292 90 S415 160, 483 160" />
+            <path d="M102 320 C190 320, 210 270, 292 270 S411 160, 483 160" />
+            <path d="M292 90 C395 90, 407 58, 585 58 S710 138, 805 138" />
+            <path d="M483 160 C585 160, 620 224, 704 224 S783 138, 805 138" />
+            <path d="M483 160 C560 160, 572 340, 708 340" />
+            <path d="M708 340 C792 340, 820 268, 913 268" />
+            <path d="M805 138 C850 138, 860 180, 913 180" />
+          </svg>
+          <button class="map-node node-a"><small>foundation</small><b>Computer basics</b><span>20 min</span></button>
+          <button class="map-node node-b"><small>foundation</small><b>How the web works</b><span>12 min</span></button>
+          <button class="map-node node-c selected"><small>you are here</small><b>HTML & CSS</b><span>32 min</span></button>
+          <button class="map-node node-d"><small>next</small><b>JavaScript</b><span>45 min</span></button>
+          <button class="map-node node-e"><small>next</small><b>Build a web app</b><span>2 hr</span></button>
+          <button class="map-node node-f"><small>advanced</small><b>Deploy to the cloud</b><span>1 hr</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap track-section" id="track">
+      <div class="section-kicker">LEARNING PATH / SELF-TAUGHT</div>
+      <div class="section-heading-row">
+        <div>
+          <h2>Make animated<br><em>educational videos with code.</em></h2>
+        </div>
+        <p class="track-lede">A beginning-to-end path for teaching yourself <strong>Canvas Commons</strong> — the community-maintained fork of Motion Canvas — from your first moving circle to a published, narrated lesson.</p>
+      </div>
+
+      <div class="track-facts">
+        <div><span>Tool</span><b>Canvas Commons</b><small>formerly Motion Canvas · TypeScript</small></div>
+        <div><span>Path</span><b>9 phases</b><small>~4–6 weeks at 5 hrs/week</small></div>
+        <div><span>You need</span><b>JS basics + Node.js</b><small>everything else is in the path</small></div>
+        <div><span>You'll ship</span><b>A 2–4 min lesson</b><small>1080p, narrated, captioned</small></div>
+      </div>
+
+      <div class="track-stage">
+        <div class="track-rail">
+          <div class="track-progress"><span>Your progress</span><b id="trackProgressText">0 / 9</b><div class="track-bar"><i id="trackProgressBar"></i></div></div>
+          <ol class="phase-list" id="phaseList"></ol>
+        </div>
+        <article class="phase-panel" id="phasePanel" aria-live="polite"></article>
+      </div>
+
+      <div class="selfteach-grid">
+        <div class="selfteach-card dark">
+          <div class="section-kicker">HOW TO TEACH YOURSELF THIS</div>
+          <h3>The copy → change → create loop</h3>
+          <p>Every phase follows the same rhythm. It works because you are never staring at an empty file.</p>
+          <ol class="loop-list">
+            <li><b>Copy</b> a small working example and run it unchanged.</li>
+            <li><b>Change</b> one thing at a time — a duration, a color, an easing — and predict the result before you save.</li>
+            <li><b>Create</b> a tiny scene of your own that uses the idea without looking at the example.</li>
+            <li><b>Keep</b> anything reusable in a personal <code>snippets/</code> folder. That folder becomes your toolkit.</li>
+          </ol>
+        </div>
+        <div class="selfteach-card">
+          <div class="section-kicker">WHEN YOU GET STUCK</div>
+          <ul class="stuck-list">
+            <li><b>Read the types.</b> Hover a component in your editor — the TypeScript definitions are the most complete docs there are.</li>
+            <li><b>Search old docs too.</b> The API matches Motion Canvas, so Motion Canvas tutorials and examples apply — just change imports from <code>@motion-canvas/*</code> to <code>@canvas-commons/*</code>.</li>
+            <li><b>Shrink the problem.</b> Make a fresh scene with only the broken element in it.</li>
+            <li><b>Ask with a repro.</b> Post a minimal scene file in the project's GitHub discussions or community chat.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap philosophy-section">
+      <div class="quote-panel">
+        <div class="quote-mark">“</div>
+        <blockquote>Don't just learn the answer.<br><span>Learn the chain that makes the answer usable.</span></blockquote>
+        <div class="quote-source">THE DOHOW PRINCIPLE / 001</div>
+      </div>
+      <div class="method-grid">
+        <div class="method-step"><span>01</span><h3>Pick a goal</h3><p>Start with what you want to accomplish, not a textbook chapter.</p></div>
+        <div class="method-step"><span>02</span><h3>Fill the gaps</h3><p>Follow prerequisites until every required piece makes sense.</p></div>
+        <div class="method-step"><span>03</span><h3>Do the thing</h3><p>Each guide ends with an action, not just more reading.</p></div>
+        <div class="method-step"><span>04</span><h3>Go further</h3><p>Finished? Follow the graph into the next capability.</p></div>
+      </div>
+    </section>
+
+    <section class="section-wrap contribute-section" id="contribute">
+      <div class="contribute-card">
+        <div>
+          <div class="section-kicker">OPEN BY DEFAULT</div>
+          <h2>Know something useful?<br><em>Teach the next person.</em></h2>
+          <p>DoHow! grows when practitioners turn their hard-earned know-how into clear, reusable instructions.</p>
+        </div>
+        <div class="contribute-side">
+          <button class="pill-btn large" id="contributeBtn">Write a guide <span>↗</span></button>
+          <div class="tiny-note">Free to read · free to contribute · built for humans</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <div class="footer-brand"><span class="brand-mark"><span></span><span></span><span></span></span><b>DoHow<span class="brand-bang">!</span></b></div>
+    <div class="footer-tagline">A public library of practical know-how.</div>
+    <div class="footer-links"><a href="#guides">Guides</a><a href="#map">Map</a><a href="#track">Video Path</a><a href="#contribute">Contribute</a><a href="#top">Back to top ↑</a></div>
+    <div class="footer-bottom"><span>© 2026 DoHow! prototype</span><span>Inspired by the idea of structured, universal learning.</span></div>
+  </footer>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-panel">
+      <div class="search-panel-head"><span>Search DoHow!</span><button class="close-btn" id="closeSearch" aria-label="Close">×</button></div>
+      <div class="search-input-wrap"><span>⌕</span><input id="overlaySearch" type="search" placeholder="Try “fix a leaking tap” or “learn calculus”" /></div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-foot"><span>Press <kbd>ESC</kbd> to close</span><span>Type to filter concepts</span></div>
+    </div>
+  </div>
+
+  <div class="guide-modal" id="guideModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="guide-panel">
+      <button class="close-btn modal-close" data-close-modal>×</button>
+      <div class="modal-kicker" id="modalKicker"></div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="prereq-box"><span>YOU MAY WANT TO KNOW FIRST</span><div id="modalPrereqs"></div></div>
+      <div class="modal-actions"><button class="pill-btn" id="startGuideBtn">Start guide <span>→</span></button><button class="outline-btn" data-close-modal>Close</button></div>
+    </article>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="track.js"></script>
+</body>
+</html>
